@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Networks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --accent: #fd79a8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--light), var(--secondary));
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .social-container {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .social-card {
+            background-color: var(--light);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        
+        .social-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .social-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .social-username {
+            color: #636e72;
+            margin-bottom: 15px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light);
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .social-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://cdn.discordapp.com/attachments/699239766079569960/1367583273269596220/IMG_1550.jpg?ex=68151cac&is=6813cb2c&hm=2f8c6e1e71447d10b25b794a095fdd25a0740fefea307384db88c56510621e90&" alt="Profile Picture" class="profile-img">
+            <h1>ДЕНИС КОМАР</h1>
+            <p class="tagline"> Web Developer | Graphical Designer</p>
+        </div>
+        
+        <div class="social-container">
+            <div class="social-card" onclick="window.open('https://instagram.com/matrixxtripp', '_blank')">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3 class="social-name">Instagram</h3>
+                <p class="social-username">@matrixxtripp</p>
+                <a href="https://instagram.com/matrixxtripp" class="social-link">Follow</a>
+            </div>
+            
+            <!--
+
+            <div class="social-card" onclick="window.open('https://github.com/yourusername', '_blank')">
+                <div class="social-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3 class="social-name">GitHub</h3>
+                <p class="social-username">SOON</p>
+                <a href="#" class="social-link">SOON...</a>
+            </div>
+            -->
+
+
+            <!-- Twitch -->
+            <div class="social-card" onclick="window.open('https://youtube.com/xerohell666', '_blank')">
+                <div class="social-icon">
+                    <i class="fab fa-twitch"></i>
+                </div>
+                <h3 class="social-name">Twitch</h3>
+                <p class="social-username">@xerohell666</p>
+                <a href="https://youtube.com/xerohell666" class="social-link">Subscribe</a>
+            </div>
+            
+            <!-- TikTok -->
+            <div class="social-card" onclick="window.open('https://tiktok.com/@xerohell666', '_blank')">
+                <div class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <h3 class="social-name">TikTok</h3>
+                <p class="social-username">@xerohell666</p>
+                <a href="https://tiktok.com/@xerohell666" class="social-link">Follow</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Денис Комар. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
